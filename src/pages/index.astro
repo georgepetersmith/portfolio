@@ -1,62 +1,48 @@
 ---
+import Layout from '../layouts/main.astro'
 import SkillCard from '../components/SkillCard.astro'
+import BlogCard from '../components/BlogCard.astro'
 ---
 
-<html lang="en-GB">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<meta name="generator" content={Astro.generator} />
-		<meta name="description" content="George Smith is an experience software engineer. This is his blog and portfolio." />
-        <meta name="keywords" content="web development, blog, portfolio" />
-		<title>George Smith - Blog & Portfolio</title>
-	</head>
-	<body>
-        <nav>
-            <a href="#" title="Home page">Home</a>
-            <a href="#" title="All blog posts">Blog</a>
-            <a href="#" title="Contact details">Contact</a>
-        </nav>
-        <header>
-            <hgroup>
-                <h1>George Smith</h1>
-                <p>Crafting software with passion and precision</p>
-            </hgroup>
-            <button>Contact Me</button>
-            <button>Learn More</button>
-        </header>
-        <div>
-            <h2>About</h2>
-            <p>I am an impassioned Senior Software Engineer with over six years of experience specializing in C#, .NET, and scalable systems.</p>
-            <p>I thrive on solving complex problems, leading innovative projects, and continuously expanding my technical skills.</p>
-        </div>
-        <div>
-            <h3>Principals</h3>
-            <ul>
-                <li>Simplicity over flamboyance</li>
-                <li>Remember the machine behind the abstraction</li>
-            </ul>
-        </div>
-        <div>
-            <h3>Skills</h3>
-            <SkillCard skill=".NET", src="" />
-            <SkillCard skill="Blazor", src="" />
-            <SkillCard skill="Vue.js", src="" />
-            <SkillCard skill="SQL Server", src="" />
-            <SkillCard skill="Azure", src="" />
-            <SkillCard skill="Docker", src="" />
-            <SkillCard skill="OAuth2", src="" />
-            <SkillCard skill="RabbitMQ", src="" />
-            <SkillCard skill="Astro", src="" />
-        </div>
-        <div>
-            <h2>Blog</h2>
-            <p>Coming soon</p>
-        </div>
-        <footer>
-            <a href="#" title="GitHub">GitHub</a>
-            <a href="#" title="LinkedIn">LinkedIn</a>
-        </footer>
-	</body>
-</html>
+<Layout title="George Smith - Blog & Portfolio"
+    <header>
+        <hgroup>
+            <h1>George Smith</h1>
+            <p>Crafting blazingly-fast software with passion and precision</p>
+        </hgroup>
+        <a href="/blog">Blog</a>
+        <a href="#about-section">Learn More</a>
+    </header>
+    <section id="about-section">
+        <h2>About</h2>
+        <p>I am an enthusiastic full-stack senior software engineer with over six years of commercial experience, specialising in C#, .NET, and scalable systems.</p>
+    </section>
+    <section>
+        <h3>Principals</h3>
+        <ul>
+            <li>Keep it simple</li>
+            <li>Write for the machine, name for the human</li>
+            <li>You can learn anything with time and dedication</li>
+        </ul>
+    </section>
+    <section>
+        <h3>Tech Stack</h3>
+        <SkillCard skill=".NET", src="/NET.svg" />
+        <SkillCard skill="Rust", src="/rust-logo-blk.svg" />
+        <SkillCard skill="Go", src="/Go-Logo_Blue.svg" />
+        <SkillCard skill="Blazor", src="/Blazor.svg" />
+        <SkillCard skill="Vue.js", src="/Vue.js.svg" />
+        <SkillCard skill="SQL Server", src="/Microsoft SQL Server.svg" />
+        <SkillCard skill="Azure", src="/Azure.svg" />
+        <SkillCard skill="Docker", src="/docker-mark-blue.svg" />
+        <SkillCard skill="OAuth2", src="/oauth.svg" />
+        <SkillCard skill="RabbitMQ", src="/rabbitmq.svg" />
+        <SkillCard skill="Astro", src="/Astro.svg" />
+    </section>
+    <section>
+        <h2>Blog</h2>
+        <BlogCard title="You're not my type" tagline="Communicating through the type system" />
+        <BlogCard title="Wolf in sheep's clothing" tagline="Performace problems hiding behind interfaces" />
+        <BlogCard title="Who turned the lights off?" tagline="Light vs dark themes" />
+    </section>
+</Layout>
