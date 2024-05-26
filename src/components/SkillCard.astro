@@ -1,5 +1,10 @@
 ---
-const { skill, src } = Astro.props;
+interface Props {
+    skill: string;
+    src: string;
+}
+
+const { skill, src } = Astro.props as Props;
 ---
 
 <figure>

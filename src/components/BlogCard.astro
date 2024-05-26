@@ -1,5 +1,10 @@
 ---
-const { title, tagline } = Astro.props;
+interface Props {
+    title: string;
+    tagline: string;
+}
+
+const { title, tagline } = Astro.props as Props;
 ---
 
 <div>

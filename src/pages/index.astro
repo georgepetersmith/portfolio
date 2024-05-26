@@ -4,10 +4,10 @@ import SkillCard from '../components/SkillCard.astro'
 import BlogCard from '../components/BlogCard.astro'
 ---
 
-<Layout title="George Smith - Blog & Portfolio"
+<Layout title="George Smith - Blog & Portfolio">
     <header>
         <hgroup>
-            <h1>George Smith</h1>
+            <h1 class="text-2xl font-extrabold">George Smith</h1>
             <p>Crafting blazingly-fast software with passion and precision</p>
         </hgroup>
         <a href="/blog">Blog</a>
@@ -27,17 +27,19 @@ import BlogCard from '../components/BlogCard.astro'
     </section>
     <section>
         <h3>Tech Stack</h3>
-        <SkillCard skill=".NET", src="/NET.svg" />
-        <SkillCard skill="Rust", src="/rust-logo-blk.svg" />
-        <SkillCard skill="Go", src="/Go-Logo_Blue.svg" />
-        <SkillCard skill="Blazor", src="/Blazor.svg" />
-        <SkillCard skill="Vue.js", src="/Vue.js.svg" />
-        <SkillCard skill="SQL Server", src="/Microsoft SQL Server.svg" />
-        <SkillCard skill="Azure", src="/Azure.svg" />
-        <SkillCard skill="Docker", src="/docker-mark-blue.svg" />
-        <SkillCard skill="OAuth2", src="/oauth.svg" />
-        <SkillCard skill="RabbitMQ", src="/rabbitmq.svg" />
-        <SkillCard skill="Astro", src="/Astro.svg" />
+        <div>
+            <SkillCard skill=".NET" src="/NET.svg" />
+            <SkillCard skill="Rust" src="/rust-logo-blk.svg" />
+            <SkillCard skill="Go" src="/Go-Logo_Blue.svg" />
+            <SkillCard skill="Blazor" src="/Blazor.svg" />
+            <SkillCard skill="Vue.js" src="/Vue.js.svg" />
+            <SkillCard skill="SQL Server" src="/Microsoft SQL Server.svg" />
+            <SkillCard skill="Azure" src="/Azure.svg" />
+            <SkillCard skill="Docker" src="/docker-mark-blue.svg" />
+            <SkillCard skill="OAuth2" src="/oauth.svg" />
+            <SkillCard skill="RabbitMQ" src="/rabbitmq.svg" />
+            <SkillCard skill="Astro" src="/Astro.svg" />
+        </div>
     </section>
     <section>
         <h2>Blog</h2>
