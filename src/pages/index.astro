@@ -5,47 +5,55 @@ import BlogCard from '../components/BlogCard.astro'
 ---
 
 <Layout title="George Smith - Blog & Portfolio">
-    <header>
-        <hgroup>
-            <p>Senior Software Engineer</p>
-            <h1 class="text-2xl font-extrabold">George Smith</h1>
-            <p>Crafting blazingly-fast software with passion and precision</p>
-        </hgroup>
-        <a href="/blog">Blog</a>
-        <a href="#about-section">Learn More</a>
-    </header>
-    <section id="about-section">
-        <h2>About</h2>
-        <p>I am an enthusiastic software engineer with over six years of commercial experience, specialising in C#, .NET, and scalable systems.</p>
-    </section>
-    <section>
-        <h3>Principals</h3>
-        <ul>
-            <li>Keep it simple</li>
-            <li>Write for the machine, name for the human</li>
-            <li>You can learn anything with time and dedication</li>
-        </ul>
-    </section>
-    <section>
-        <h3>Tech Stack</h3>
-        <div>
-            <SkillCard skill=".NET" icon="/NET.svg" />
-            <SkillCard skill="Rust" icon="/rust-logo-blk.svg" />
-            <SkillCard skill="Go" icon="/Go-Logo_Blue.svg" />
-            <SkillCard skill="Blazor" icon="/Blazor.svg" />
-            <SkillCard skill="Vue.js" icon="/Vue.js.svg" />
-            <SkillCard skill="SQL Server" icon="/Microsoft SQL Server.svg" />
-            <SkillCard skill="Azure" icon="/Azure.svg" />
-            <SkillCard skill="Docker" icon="/docker-mark-blue.svg" />
-            <SkillCard skill="OAuth2" icon="/oauth.svg" />
-            <SkillCard skill="RabbitMQ" icon="/rabbitmq.svg" />
-            <SkillCard skill="Astro" icon="/Astro.svg" />
+
+    <header class="mx-auto py-32">
+        <div class="container mx-auto">
+            <hgroup>
+                <p class="font-thin">Senior Software Engineer</p>
+                <h1 class="mt-5 text-5xl font-extrabold">George Smith</h1>
+                <p class="mt-5 font-semibold text-slate-500">Crafting blazingly-fast software with passion and precision</p>
+            </hgroup>
+            <div class="mt-10 flex items-center space-x-5">
+                <a href="/blog" class="py-2 px-8 text-white bg-purple-500 rounded-md">Blog</a>
+                <a href="#about-section">Learn More</a>
+            </div>
         </div>
-    </section>
-    <section>
-        <h2>Blog</h2>
-        <BlogCard title="You're not my type" tagline="Communicating through the type system" />
-        <BlogCard title="Wolf in sheep's clothing" tagline="Performace problems hiding behind interfaces" />
-        <BlogCard title="Who turned the lights off?" tagline="Light vs dark themes" />
-    </section>
+    </header>
+
+    <div class="container mx-auto">
+        <section id="about-section">
+            <h2 class="text-xl font-bold">About</h2>
+            <p>I am an enthusiastic software engineer with over six years of commercial experience, specialising in C#, .NET, and scalable systems.</p>
+        </section>
+        <section>
+            <h3 class="text-xl">Principals</h3>
+            <ul>
+                <li>Keep it simple</li>
+                <li>Write for the machine, name for the human</li>
+                <li>You can learn anything with time and dedication</li>
+            </ul>
+        </section>
+        <section>
+            <h3 class="text-xl">Tech Stack</h3>
+            <div class="w-fit grid grid-cols-3 gap-4">
+                <SkillCard skill=".NET" icon="/NET.svg" />
+                <SkillCard skill="Rust" icon="/rust-logo-blk.svg" />
+                <SkillCard skill="Go" icon="/Go-Logo_Blue.svg" />
+                <SkillCard skill="Blazor" icon="/Blazor.svg" />
+                <SkillCard skill="Vue.js" icon="/Vue.js.svg" />
+                <SkillCard skill="SQL" icon="/Microsoft SQL Server.svg" />
+                <SkillCard skill="Azure" icon="/Azure.svg" />
+                <SkillCard skill="Docker" icon="/docker-mark-blue.svg" />
+                <SkillCard skill="OAuth2" icon="/oauth.svg" />
+                <SkillCard skill="RabbitMQ" icon="/rabbitmq.svg" />
+                <SkillCard skill="Astro" icon="/Astro.svg" />
+            </div>
+        </section>
+        <section>
+            <h2>Blog</h2>
+            <BlogCard title="You're not my type" tagline="Communicating through the type system" />
+            <BlogCard title="Wolf in sheep's clothing" tagline="Performace problems hiding behind interfaces" />
+            <BlogCard title="Who turned the lights off?" tagline="Light vs dark themes" />
+        </section>
+    </div>
 </Layout>
