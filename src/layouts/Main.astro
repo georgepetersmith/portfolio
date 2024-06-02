@@ -1,20 +1,20 @@
 ---
-import Head from '../components/Head.astro'
-import Nav from '../components/Nav.astro'
-import Footer from '../components/Footer.astro'
+import Head from "../components/Head.astro";
+import Nav from "../components/Nav.astro";
+import Footer from "../components/Footer.astro";
 
 interface Props {
-    title: string;
+  title: string;
 }
 
-const {title} = Astro.props as Props;
+const { title } = Astro.props as Props;
 ---
 
 <html lang="en-GB">
-    <Head />
-    <body>
-        <Nav />
-        <slot />
-        <Footer />
-    </body>
+  <Head />
+  <body>
+    <Nav />
+    <slot />
+    <Footer />
+  </body>
 </html>

@@ -1,13 +1,13 @@
 ---
 interface Props {
-    skill: string;
-    icon: string;
+  skill: string;
+  icon: string;
 }
 
 const { skill, icon } = Astro.props as Props;
 ---
 
 <figure class="border w-fit p-5 rounded-xl">
-    <img src={icon} alt={skill} width="50px" height="50px" class="mx-auto" />
-    <figcaption class="text-center">{skill}</figcaption>
+  <img src={icon} alt={skill} width="50px" height="50px" class="mx-auto" />
+  <figcaption class="text-center">{skill}</figcaption>
 </figure>
